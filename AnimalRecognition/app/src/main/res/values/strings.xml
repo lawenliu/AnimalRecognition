@@ -8,6 +8,7 @@
     <string name="share_empty"></string>
     <string name="cancel">Cancel</string>
     <string name="enter">Enter</string>
+    <string name="back">Back</string>
     <string name="bk_pick_title">Select Background Image</string>
     <string name="notify_content">Animal Recognition has been started</string>
     <string name="message_no_store">No app store is found in your device, please install one and try again.</string>

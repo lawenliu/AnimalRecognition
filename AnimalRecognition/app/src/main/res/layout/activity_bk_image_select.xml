@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bk1"
+    android:id="@+id/id_bk_image_select_activity"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".BkImageSelectActivity">
     <RelativeLayout
         android:id="@+id/id_title_bar"
         android:layout_width="match_parent"
@@ -19,8 +20,8 @@
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:text="@string/app_name" />
-        <Button
-            android:id="@+id/id_bk_select_btn"
+        <TextView
+            android:id="@+id/id_bk_back_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -28,18 +29,19 @@
             android:layout_marginTop="@dimen/menu_button_top_margin"
             android:layout_marginRight="@dimen/menu_button_right_margin"
             android:layout_marginEnd="@dimen/menu_button_right_margin"
-            android:text="@string/cancel" />
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:text="@string/back" />
     </RelativeLayout>
     <GridView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/id_bk_image_gridview"
         android:layout_below="@id/id_title_bar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="4dp"
-        android:numColumns="2"
+        android:numColumns="auto_fit"
         android:verticalSpacing="4dp"
         android:horizontalSpacing="4dp"
         android:stretchMode="columnWidth"
-        android:gravity="center"
         />
 </RelativeLayout>

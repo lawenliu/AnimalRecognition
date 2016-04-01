@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mToolbarTextView = null;
     private TextView mRateUsTextView = null;
 
-    private RelativeLayout mMainWindow;
+    private RelativeLayout mMainActitity;
     private ImageView mBackImageView;
     private ImageView mForwardImageView;
     private ImageView mMenuImageView = null;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMainWindow = (RelativeLayout) findViewById(R.id.id_main_window);
+        mMainActitity = (RelativeLayout) findViewById(R.id.id_main_activity);
         // Instantiate a ViewPager and a PagerAdapter.
         mBackImageView = (ImageView) findViewById(R.id.id_back);
         mForwardImageView = (ImageView) findViewById(R.id.id_forward);
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initBackground() {
         int indexBK = SharedDataManager.getInstance().getCurrentBackgroundIndex();
-        mMainWindow.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
+        mMainActitity.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
     }
 
     private void initPopupMenu(final Context context) {
