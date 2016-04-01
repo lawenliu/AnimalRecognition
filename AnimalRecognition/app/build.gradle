@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.care.animalrecognition"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('keystore.jks')
+            storePassword 'keystore'
+            keyAlias 'defaultkey'
+            keyPassword 'keystore'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+        }
+
+        release {
+            // no log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+
+            // code confuse
+            minifyEnabled true
+
+            // alignment
+            zipAlignEnabled true
+
+            // Remove no use resource
+            shrinkResources true
+
+            // proguard define file
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            // code sign configure
+            signingConfig signingConfigs.release
+        }
+    }
+
+    productFlavors {
+        /*GooglePlay{}
+        QQ{}
+        Taobao{}
+        WanDouJia{}
+        AnZhuo{}
+        AnZhi{}
+        Store360{}*/
+        BaiDu{}
+        /*Store163{}
+        GFeng{}
+        AppChina{}
+        EoeMarket{}
+        Store91{}
+        NDuo{}
+        xiaomi{}
+        umeng{}*/
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.each {output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith(".apk")) {
+                def fileName = outputFile.name.replace(".apk", "-${defaultConfig.versionName}.apk")
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile files('libs/FlurryAds-5.6.0.jar')
+    compile files('libs/FlurryAnalytics-5.6.0.jar')
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bk1"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/id_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:text="@string/app_name" />
+        <Button
+            android:id="@+id/id_bk_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/menu_button_top_margin"
+            android:layout_marginRight="@dimen/menu_button_right_margin"
+            android:layout_marginEnd="@dimen/menu_button_right_margin"
+            android:text="@string/cancel" />
+    </RelativeLayout>
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/id_bk_image_gridview"
+        android:layout_below="@id/id_title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="4dp"
+        android:numColumns="2"
+        android:verticalSpacing="4dp"
+        android:horizontalSpacing="4dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+</RelativeLayout>

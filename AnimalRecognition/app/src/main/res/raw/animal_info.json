@@ -1,0 +1,281 @@
+{"animals":[
+  {
+    "Name":"猴子",
+    "English":"monkey",
+    "Pinyin":"[hóu zi]",
+    "Image":"a1",
+    "EnDspt":"An animal with a long tail, that climbs trees and lives in hot countries. They have several types and they are related to apes and humans.",
+    "ZhDspt":"一种有着长长的尾巴，生长在热带国家的动物。 他们在世界上有很多种类，并且他们与类人猿和人类有很大的联系。",
+    "PronUS":"[ˈmʌŋki]",
+    "AudioUS":"pron_us_1",
+    "PronUK":"[ˈmʌŋki]",
+    "AudioUK":"pron_uk_1",
+    "Sounds":[
+      "sound_1_1",
+      "sound_1_2",
+      "sound_1_3",
+      "sound_1_4"
+    ]
+  },
+  {
+    "Name":"老鼠",
+    "English":"mouse",
+    "Pinyin":"[lǎo shǔ]",
+    "Image":"a2",
+    "EnDspt":"A small animal that is covered in fur and has a long thin tail. They live in fields, in people's houses or where food is stored.",
+    "ZhDspt":"一种身着毛皮，有着细长尾巴的动物。它们生活在田地里，人类的房子里或者存放食物的地方。",
+    "PronUS":"[maʊs]",
+    "AudioUS":"pron_us_2",
+    "PronUK":"[maʊs]",
+    "AudioUK":"pron_uk_2",
+    "Sounds":[
+      "sound_2_1",
+      "sound_2_2",
+      "sound_2_3"
+    ]
+  },
+  {
+    "Name":"狗",
+    "English":"dog",
+    "Pinyin":"[gǒu]",
+    "Image":"a3",
+    "EnDspt":"An animal with four legs and a tail, often kept as a pet or trained for work, for example hunting or guarding buildings. They have many types, some of which are wild.",
+    "ZhDspt":"一种有着四条腿和尾巴的动物，他们常常被当作宠物养着，或则被训练做一些事情，比如狩猎或者看守房子。世界上有很多种类，其中有野生的，也有家里养的。",
+    "PronUS":"[dɔɡ]",
+    "AudioUS":"pron_us_3",
+    "PronUK":"[dɒɡ]",
+    "AudioUK":"pron_uk_3",
+    "Sounds":[
+      "sound_3_1",
+      "sound_3_2",
+      "sound_3_3"
+    ]
+  },
+  {
+    "Name":"鹿",
+    "English":"deer",
+    "Pinyin":"[lù]",
+    "Image":"a4",
+    "EnDspt":"An animal with long legs, that eats grass, leaves, etc. and can run fast. Most males have antlers (= horns shaped like branches).",
+    "ZhDspt":"有一种动物，他们有着长长的腿，他们通常吃草或者树叶等等，并且可以跑的非常快。绝大多数公的都有多叉角。",
+    "PronUS":"[dɪr]",
+    "AudioUS":"pron_us_4",
+    "PronUK":"[dɪə(r)]",
+    "AudioUK":"pron_uk_4",
+    "Sounds":[
+      "sound_4_1",
+      "sound_4_2"
+    ]
+  },
+  {
+    "Name":"鱼",
+    "English":"fish",
+    "Pinyin":"[yú]",
+    "Image":"a5",
+    "EnDspt":"A creature that lives in water, breathes through gills , and uses fins and a tail for swimming.",
+    "ZhDspt":"一种生活在水里的动物，他们靠腮呼吸，采用鳍和尾巴游泳。",
+    "PronUS":"[fɪʃ]",
+    "AudioUS":"pron_us_5",
+    "PronUK":"[fɪʃ]",
+    "AudioUK":"pron_uk_5",
+    "Sounds":[
+      "sound_5_1",
+      "sound_5_2"
+    ]
+  },
+  {
+    "Name":"大象",
+    "English":"elephant",
+    "Pinyin":"[dà xiàng]",
+    "Image":"a6",
+    "EnDspt":"A very large animal with thick grey skin, large ears, two curved outer teeth called tusks and a long nose called a trunk.",
+    "ZhDspt":"有一种动物有着厚厚的灰色皮肤，大大的耳朵，两个弯曲向外生长的长牙，还有一条长长的大鼻子。",
+    "PronUS":"[ˈeləfənt]",
+    "AudioUS":"pron_us_6",
+    "PronUK":"[ˈelɪfənt]",
+    "AudioUK":"pron_uk_6",
+    "Sounds":[
+      "sound_6_1",
+      "sound_6_2"
+    ]
+  },
+  {
+    "Name":"猪",
+    "English":"pig",
+    "Pinyin":"[zhū]",
+    "Image":"a7",
+    "EnDspt":"An animal with pink, black or brown skin, short legs, a broad nose and a short tail which curls round itself.",
+    "ZhDspt":"有一种动物有着粉色的、黑色的或者棕色的皮肤，短短的腿，宽宽的鼻子，短短的尾巴卷曲着。",
+    "PronUS":"[pɪɡ]",
+    "AudioUS":"pron_us_7",
+    "PronUK":"[pɪɡ]",
+    "AudioUK":"pron_uk_7",
+    "Sounds":[
+      "sound_7_1",
+      "sound_7_2"
+    ]
+  },
+  {
+    "Name":"蛇",
+    "English":"snake",
+    "Pinyin":"[shé]",
+    "Image":"a8",
+    "EnDspt":"A reptile with a very long thin body and no legs, some of which are poisonous.",
+    "ZhDspt":"一种匍匐爬行的动物，它细长的身体，但是却没有脚，有些还是有毒。",
+    "PronUS":"[sneɪk]",
+    "AudioUS":"pron_us_8",
+    "PronUK":"[sneɪk]",
+    "AudioUK":"pron_uk_8",
+    "Sounds":[
+      "sound_8_1",
+      "sound_8_2"
+    ]
+  },
+  {
+    "Name":"鹰",
+    "English":"eagle",
+    "Pinyin":"[yīng]",
+    "Image":"a9",
+    "EnDspt":"A large bird of prey(= a bird that kills other creatures for food) with a sharp curved beak and very good sight.",
+    "ZhDspt":"一种捕杀其他动物作为食物的鸟，他们有一双弯曲锐利的爪和敏锐的视力。",
+    "PronUS":"[ˈɪɡ(ə)l]",
+    "AudioUS":"pron_us_9",
+    "PronUK":"[ˈiːɡ(ə)l]",
+    "AudioUK":"pron_uk_9",
+    "Sounds":[
+      "sound_9_1",
+      "sound_9_2",
+      "sound_9_3",
+      "sound_9_4"
+    ]
+  },
+  {
+    "Name":"猫",
+    "English":"cat",
+    "Pinyin":"[māo] [máo]",
+    "Image":"a10",
+    "EnDspt":"A small animal with soft fur that people often keep as a pet, they catch and kill birds and mice.",
+    "ZhDspt":"有一种小动物，他们有着软软的皮毛，人们通常把他们作为宠物喂养。它们捕杀鸟和老鼠。",
+    "PronUS":"[kæt]",
+    "AudioUS":"pron_us_10",
+    "PronUK":"[kæt]",
+    "AudioUK":"pron_uk_10",
+    "Sounds":[
+      "sound_10_1",
+      "sound_10_2",
+      "sound_10_3"
+    ]
+  },
+  {
+    "Name":"鸡",
+    "English":"chicken",
+    "Pinyin":"[jī]",
+    "Image":"a11",
+    "EnDspt":"A large bird that is often kept for its eggs or meat.",
+    "ZhDspt":"一种比较大的鸟，人们食养他们主要是为获得他们的蛋和肉。",
+    "PronUS":"[ˈtʃɪkən]",
+    "AudioUS":"pron_us_11",
+    "PronUK":"[ˈtʃɪkɪn]",
+    "AudioUK":"pron_uk_11",
+    "Sounds":[
+      "sound_11_1",
+      "sound_11_2",
+      "sound_11_3"
+    ]
+  },
+  {
+    "Name":"马",
+    "English":"horse",
+    "Pinyin":"[mǎ]",
+    "Image":"a12",
+    "EnDspt":"A large animal with four legs, a mane (= long thick hair on its neck) and a tail. They are used for riding on, pulling carriages , etc.",
+    "ZhDspt":"一种比较大的动物，有着长长的鬃毛和尾巴。通常用来骑的，也有用于拉车。",
+    "PronUS":"[hɔrs]",
+    "AudioUS":"pron_us_12",
+    "PronUK":"[hɔː(r)s]",
+    "AudioUK":"pron_uk_12",
+    "Sounds":[
+      "sound_12_1",
+      "sound_12_2",
+      "sound_12_3"
+    ]
+  },
+  {
+    "Name":"松鼠",
+    "English":"squirrel",
+    "Pinyin":"[sōng shǔ]",
+    "Image":"a14",
+    "EnDspt":"A small animal with a long thick tail and red, grey or black fur. They eat nuts and live in trees.",
+    "ZhDspt":"一种小动物有着粗粗的尾巴和红色、灰色或者黑色的毛。They主要吃坚果，并且住在树上。",
+    "PronUS":"[ˈskwɪrəl]",
+    "AudioUS":"pron_us_14",
+    "PronUK":"[ˈskwɪrəl]",
+    "AudioUK":"pron_uk_14",
+    "Sounds":[
+      "sound_14_1",
+      "sound_14_2",
+      "sound_14_3"
+    ]
+  },
+  {
+    "Name":"龙",
+    "English":"dragon",
+    "Pinyin":"[lóng]",
+    "Image":"a15",
+    "EnDspt":"(in stories) A large aggressive animal with wings and a long tail, that can breathe out fire.",
+    "ZhDspt":"（在故事中）一种具有侵略性的动物，他们有翅膀和长长的尾巴，而且还能吐火。",
+    "PronUS":"[ˈdræɡən]",
+    "AudioUS":"pron_us_15",
+    "PronUK":"[ˈdræɡən]",
+    "AudioUK":"pron_uk_15",
+    "Sounds":[
+    ]
+  },
+  {
+    "Name":"乌龟",
+    "English":"tortoise",
+    "Pinyin":"[wū guī]",
+    "Image":"a17",
+    "EnDspt":"A reptile with a hard round shell, that lives on land and moves very slowly. It can pull its head and legs into its shell.",
+    "ZhDspt":"一种爬行动物，有着厚厚的贝壳，他们生活在陆地上，并且移动缓慢，他们能把自己的脑袋和尾巴放到他们壳里。",
+    "PronUS":"[ˈtɔrtəs]",
+    "AudioUS":"pron_us_17",
+    "PronUK":"[ˈtɔː(r)təs]",
+    "AudioUK":"pron_uk_17",
+    "Sounds":[
+    ]
+  },
+  {
+    "Name":"鹅",
+    "English":"goose",
+    "Pinyin":"[é]",
+    "Image":"a18",
+    "EnDspt":"A bird like a large duck with a long neck. They either live wild or are kept on farms.",
+    "ZhDspt":"有一种鸟，长得像鸭子，有着长长的脖子，有野生的，也有食养的。",
+    "PronUS":"[ɡus]",
+    "AudioUS":"pron_us_18",
+    "PronUK":"[ɡuːs]",
+    "AudioUK":"pron_uk_18",
+    "Sounds":[
+      "sound_18_1",
+      "sound_18_2",
+      "sound_18_3"
+    ]
+  },
+  {
+    "Name":"山羊",
+    "English":"goat",
+    "Pinyin":"[shān yáng]",
+    "Image":"a20",
+    "EnDspt":"An animal with horns and a coat of hair, that lives wild in mountain areas or is kept on farms for its milk or meat.",
+    "ZhDspt":"有一种动物长着两只角，并且长了一身的毛，他们生长在山区，或者被圈养在农场，可以得到牛奶或肉。",
+    "PronUS":"[ɡoʊt]",
+    "AudioUS":"pron_us_20",
+    "PronUK":"[ɡəʊt]",
+    "AudioUK":"pron_uk_20",
+    "Sounds":[
+      "sound_20_1",
+      "sound_20_2"
+    ]
+  }
+]}

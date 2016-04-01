@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#753F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#777777</color>
+    <color name="transparent">#00ffffff</color>
+
+    <color name="color_desc_zh">#9332B0</color>
+    <color name="color_desc_en">#FF00FF</color>
+    <color name="color_word">#733320</color>
+    <color name="color_pron">#B33060</color>
+
+    <color name="popup_menu_font_color">#000000</color>
+</resources>
