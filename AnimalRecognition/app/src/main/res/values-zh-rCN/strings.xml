@@ -7,6 +7,7 @@
     <string name="share_empty"></string>
     <string name="cancel">取消</string>
     <string name="enter">确定</string>
+    <string name="back">返回</string>
     <string name="bk_pick_title">选择颜色</string>
     <string name="notify_content">动物猜猜看正在进行中。。。</string>
     <string name="message_no_store">没有找到应用市场，请安装任意应用市场后重试</string>
