@@ -13,18 +13,19 @@ import com.care.animalrecognition.SlidePageFragment;
 import com.care.core.AnimalDataManager;
 
 public class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
-    int mNumberPages = 0;
+    private Context mContext;
+    private int mNumberPages = 0;
 
     public ScreenSlidePagerAdapter(Context context, FragmentManager fm) {
         super(fm);
-
+        mContext = context;
         mNumberPages = AnimalDataManager.getInstance(context).getAnimalCount();
     }
 
     @Override
     public Fragment getItem(int position) {
         SlidePageFragment fragment = new SlidePageFragment();
-        fragment.setArguments(position);
+        fragment.setArguments(mContext, position);
         return fragment;
     }
 

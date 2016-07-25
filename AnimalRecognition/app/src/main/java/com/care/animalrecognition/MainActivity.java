@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.media.Image;
 import android.media.MediaPlayer;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
@@ -31,17 +33,14 @@ import com.care.core.SharedDataManager;
 import com.care.core.Utilities;
 import com.care.transforms.ZoomOutPageTransformer;
 import com.flurry.android.FlurryAgent;
-import com.flurry.android.ads.FlurryAdBanner;
-import com.flurry.android.ads.FlurryAdBannerListener;
-import com.flurry.android.ads.FlurryAdErrorType;
+import com.wandoujia.ads.sdk.Ads;
 
 public class MainActivity extends AppCompatActivity {
 
     private MediaPlayer mMediaPlayerMenu = null;
     private MediaPlayer mMediaPlayerNext = null;
 
-    private RelativeLayout mFlurryAdBannerLayout = null;
-    private FlurryAdBanner mFlurryAdBanner = null;
+    private RelativeLayout mAdBannerLayout = null;
 
     private ViewPager mPager;
     private PagerAdapter mPagerAdapter;
@@ -72,43 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         initBackground();
         // Flurry Initialize
-        mFlurryAdBannerLayout = (RelativeLayout) findViewById(R.id.id_flurry_ad_banner);
-        mFlurryAdBanner = new FlurryAdBanner(this, mFlurryAdBannerLayout, Constants.FlurryAdSpace);
-        mFlurryAdBanner.setListener(new FlurryAdBannerListener() {
-            @Override
-            public void onFetched(FlurryAdBanner flurryAdBanner) {
-                flurryAdBanner.displayAd();
-            }
-
-            @Override
-            public void onRendered(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onShowFullscreen(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onCloseFullscreen(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onAppExit(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onClicked(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onVideoCompleted(FlurryAdBanner flurryAdBanner) {
-            }
-
-            @Override
-            public void onError(FlurryAdBanner flurryAdBanner, FlurryAdErrorType flurryAdErrorType, int i) {
-                flurryAdBanner.destroy();
-            }
-        });
+        mAdBannerLayout = (RelativeLayout) findViewById(R.id.id_ad_banner);
 
         mMediaPlayerMenu = MediaPlayer.create(this, R.raw.btn_sound_1);
         mMediaPlayerMenu.setLooping(false);
@@ -129,6 +92,34 @@ public class MainActivity extends AppCompatActivity {
         });
 
         initPopupMenu(this);
+        initializeAds();
+    }
+
+    private void initializeAds() {
+        new AsyncTask<Void, Void, Boolean>() {
+            @Override
+            protected Boolean doInBackground(Void... params) {
+                try {
+                    Ads.init(MainActivity.this, Constants.WANDOUJIA_APP_ID, Constants.WANDOUJIA_SECRET_KEY);
+                    return true;
+                } catch (Exception e) {
+                    return false;
+                }
+            }
+
+            @Override
+            protected void onPostExecute(Boolean success) {
+                if (success) {
+                    Ads.preLoad(Constants.WANDOUJIA_BANNER_ID, Ads.AdFormat.banner);
+                    View bannerView = Ads.createBannerView(MainActivity.this, Constants.WANDOUJIA_BANNER_ID);
+                    mAdBannerLayout.addView(bannerView, new ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.MATCH_PARENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                    ));
+
+                }
+            }
+        }.execute();
     }
 
     private void backward() {
@@ -143,10 +134,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        if(mFlurryAdBanner != null) {
-            mFlurryAdBanner.destroy();
-        }
-
         super.onDestroy();
     }
 
@@ -156,7 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
         initBackground();
         FlurryAgent.onStartSession(this);
-        mFlurryAdBanner.fetchAd();
     }
 
     @Override

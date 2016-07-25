@@ -15,6 +15,13 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+
+        /**
+         * Add aar folder here
+         */
+        flatDir {
+            dirs 'aar'
+        }
     }
 }
 

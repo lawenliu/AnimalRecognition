@@ -1,15 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.care.animalrecognition"
-        minSdkVersion 15
-        targetSdkVersion 23
-        versionCode 2
-        versionName "1.1"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 2016072401
+        versionName "1.2"
 
         multiDexEnabled true
         manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]
@@ -87,8 +87,20 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile files('libs/FlurryAds-5.6.0.jar')
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
     compile files('libs/FlurryAnalytics-5.6.0.jar')
+    compile 'com.google.android.gms:play-services:7.5.0'
+    /**
+     * ??WandoujiaSDK.aar
+     */
+    compile(name: 'WandoujiaSDK', ext: 'aar')
+    /**
+     * ???sdk????
+     */
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+    compile 'com.squareup:otto:1.3.6'
+    compile 'com.squareup.picasso:picasso:2.4.0'
 }

@@ -1,5 +1,6 @@
 package com.care.animalrecognition;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.media.MediaPlayer;
@@ -26,6 +27,7 @@ import java.util.Random;
  */
 public class SlidePageFragment extends Fragment {
 
+    private Context mContext;
     private int mCurrentIndex = 0;
 
     private MediaPlayer mMediaPlayerImage = null;
@@ -60,7 +62,7 @@ public class SlidePageFragment extends Fragment {
         mUsPronAudioImageView = (ImageView) rootView.findViewById(R.id.id_page_us_pron_audio);
         mEnDescTextView = (TextView) rootView.findViewById(R.id.id_page_en_desc);
 
-        AnimalInfo animalInfo = AnimalDataManager.getInstance(getContext()).getAnimalByIndex(mCurrentIndex);
+        AnimalInfo animalInfo = AnimalDataManager.getInstance(mContext).getAnimalByIndex(mCurrentIndex);
         mPictureImageView.setImageResource(Utilities.getResId(animalInfo.Image, R.drawable.class));
         mZhDescTextView.setText(animalInfo.ZhDspt);
         mZhWordTextView.setText(animalInfo.Name);
@@ -70,14 +72,14 @@ public class SlidePageFragment extends Fragment {
         mUsPronTextView.setText(animalInfo.PronUS);
         mEnDescTextView.setText((animalInfo.EnDspt));
 
-        mMediaPlayerUkAudio = MediaPlayer.create(getContext(), Utilities.getResId(animalInfo.AudioUK, R.raw.class));
+        mMediaPlayerUkAudio = MediaPlayer.create(mContext, Utilities.getResId(animalInfo.AudioUK, R.raw.class));
         mMediaPlayerUkAudio.setLooping(false);
-        mMediaPlayerUsAudio = MediaPlayer.create(getContext(),  Utilities.getResId(animalInfo.AudioUS, R.raw.class));
+        mMediaPlayerUsAudio = MediaPlayer.create(mContext,  Utilities.getResId(animalInfo.AudioUS, R.raw.class));
         mMediaPlayerUsAudio.setLooping(false);
         Random rand = new Random();
         int index = animalInfo.Sounds.size() > 1 ? rand.nextInt(animalInfo.Sounds.size() - 1) : -1;
         if(index >= 0) {
-            mMediaPlayerImage = MediaPlayer.create(getContext(), Utilities.getResId(animalInfo.Sounds.get(index), R.raw.class));
+            mMediaPlayerImage = MediaPlayer.create(mContext, Utilities.getResId(animalInfo.Sounds.get(index), R.raw.class));
             mMediaPlayerImage.setLooping(false);
         }
 
@@ -111,7 +113,8 @@ public class SlidePageFragment extends Fragment {
         return rootView;
     }
 
-    public void setArguments(int curIndex) {
+    public void setArguments(Context context, int curIndex) {
+        mContext = context;
         mCurrentIndex = curIndex;
     }
 
