@@ -8,8 +8,8 @@ android {
         applicationId "com.care.animalrecognition"
         minSdkVersion 16
         targetSdkVersion 22
-        versionCode 2016072401
-        versionName "1.2"
+        versionCode 2016073001
+        versionName "1.3"
 
         multiDexEnabled true
         manifestPlaceholders = [UMENG_CHANNEL_VALUE: "umeng"]

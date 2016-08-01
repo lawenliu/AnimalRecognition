@@ -17,11 +17,7 @@ public class Constants {
     public static String WANDOUJIA_BANNER_ID = "cbddde9459dbd93155b61dc491803ffe";
 
     // Key for shared data
-    public static String KeyAntiMosquitoTurnedOn = "AntiMosquitoTurnedOn";
     public static String KeyCurrentBackgroundIndex = "CurrentBackgroundIndex";
-    public static String KeyCurrentAnimalIndex = "CurrentAnimalIndex";
-
-    public static int MaxBKModeCount = 7;
 
     public static int[] VoiceIds = {
     };

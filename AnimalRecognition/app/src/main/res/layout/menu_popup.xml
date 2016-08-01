@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/popup_menu_margin"
     android:padding="@dimen/popup_menu_padding"
-    android:background="@drawable/menu_bg_selector">
+    android:background="@drawable/menu_bk_selector">
     <TextView
         android:id="@+id/menu_color_screen"
         android:layout_width="wrap_content"

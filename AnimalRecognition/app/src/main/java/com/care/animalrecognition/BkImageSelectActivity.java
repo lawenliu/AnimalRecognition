@@ -62,5 +62,8 @@ public class BkImageSelectActivity extends Activity {
                 mBkSelectActivity.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
             }
         });
+
+        int indexBK = SharedDataManager.getInstance().getCurrentBackgroundIndex();
+        mBkSelectActivity.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
     }
 }

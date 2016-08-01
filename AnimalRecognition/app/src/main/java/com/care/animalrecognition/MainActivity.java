@@ -3,22 +3,13 @@ package com.care.animalrecognition;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -27,7 +18,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.care.adapters.ScreenSlidePagerAdapter;
-import com.care.core.AnimalDataManager;
 import com.care.core.Constants;
 import com.care.core.SharedDataManager;
 import com.care.core.Utilities;
@@ -49,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mToolbarTextView = null;
     private TextView mRateUsTextView = null;
 
-    private RelativeLayout mMainActitity;
-    private ImageView mBackImageView;
-    private ImageView mForwardImageView;
+    private RelativeLayout mMainActivity = null;
     private ImageView mMenuImageView = null;
 
     @Override
@@ -59,10 +47,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mMainActitity = (RelativeLayout) findViewById(R.id.id_main_activity);
+        mMainActivity = (RelativeLayout) findViewById(R.id.id_main_activity);
         // Instantiate a ViewPager and a PagerAdapter.
-        mBackImageView = (ImageView) findViewById(R.id.id_back);
-        mForwardImageView = (ImageView) findViewById(R.id.id_forward);
         mMenuImageView = (ImageView) findViewById(R.id.id_btn_menu);
         mPager = (ViewPager) findViewById(R.id.id_pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(this, getSupportFragmentManager());
@@ -77,19 +63,6 @@ public class MainActivity extends AppCompatActivity {
         mMediaPlayerMenu.setLooping(false);
         mMediaPlayerNext = MediaPlayer.create(this, R.raw.btn_sound_2);
         mMediaPlayerNext.setLooping(false);
-        mBackImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                backward();
-            }
-        });
-
-        mForwardImageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                forward();
-            }
-        });
 
         initPopupMenu(this);
         initializeAds();
@@ -185,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initBackground() {
         int indexBK = SharedDataManager.getInstance().getCurrentBackgroundIndex();
-        mMainActitity.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
+        mMainActivity.setBackgroundResource(Utilities.getResId("bk" + (indexBK + 1), R.drawable.class));
     }
 
     private void initPopupMenu(final Context context) {

@@ -26,17 +26,6 @@ public class SharedDataManager {
         mEditor = this.mPrefs.edit();
     }
 
-    public boolean isAntiMosquitoTurnedOn() {
-        return mPrefs != null && this.mPrefs.getBoolean(Constants.KeyAntiMosquitoTurnedOn, false);
-    }
-
-    public void setIsAntiMosquitoTurnedOn(boolean newValue) {
-        if(mEditor != null) {
-            mEditor.putBoolean(Constants.KeyAntiMosquitoTurnedOn, newValue);
-            mEditor.commit();
-        }
-    }
-
     public int getCurrentBackgroundIndex() {
         if(mPrefs != null) {
             return mPrefs.getInt(Constants.KeyCurrentBackgroundIndex, 0);
