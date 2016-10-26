@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mBkPickTextView = null;
     private TextView mToolbarTextView = null;
     private TextView mRateUsTextView = null;
+    private TextView mCloseAdsTextView = null;
 
     private RelativeLayout mMainActivity = null;
     private ImageView mMenuImageView = null;
@@ -166,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
         mBkPickTextView = (TextView)menuContent.findViewById(R.id.menu_color_screen);
         mToolbarTextView = (TextView)menuContent.findViewById(R.id.menu_tool_bar);
         mRateUsTextView = (TextView)menuContent.findViewById(R.id.menu_rate_us);
+        mCloseAdsTextView = (TextView)menuContent.findViewById(R.id.menu_close_ads);
 
         mPopupMenu = new PopupWindow(menuContent, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         mPopupMenu.setFocusable(true);
@@ -201,8 +203,15 @@ public class MainActivity extends AppCompatActivity {
                 Utilities.launchAppStoreDetail(context);
             }
         });
+        mCloseAdsTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showAndDismissPopupMenu();
+                mAdBannerLayout.setVisibility(View.INVISIBLE);
+                mAdBannerLayout.setLayoutParams(new RelativeLayout.LayoutParams(0, 0));
+            }
+        });
     }
-
 
     private void showAndDismissPopupMenu() {
         if(mPopupMenu.isShowing()) {

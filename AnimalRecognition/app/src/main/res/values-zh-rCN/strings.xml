@@ -3,6 +3,7 @@
     <string name="action_settings">更多设置</string>
     <string name="action_bk_pick">改变背景</string>
     <string name="action_rate_us">给个好评</string>
+    <string name="action_close_ads">关闭广告</string>
 
     <string name="share_empty"></string>
     <string name="cancel">取消</string>
